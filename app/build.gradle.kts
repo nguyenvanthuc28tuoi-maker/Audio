@@ -6,6 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.audio"
+
     compileSdk {
         version = release(37)
     }
@@ -67,17 +68,23 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
+    implementation("androidx.media3:media3-exoplayer:1.11.1")
+    implementation("androidx.media3:media3-session:1.11.1")
+
     testImplementation(libs.junit)
 
     androidTestImplementation(
         platform(libs.androidx.compose.bom)
     )
+
     androidTestImplementation(
         libs.androidx.compose.ui.test.junit4
     )
+
     androidTestImplementation(
         libs.androidx.espresso.core
     )
+
     androidTestImplementation(
         libs.androidx.junit
     )
@@ -85,6 +92,7 @@ dependencies {
     debugImplementation(
         libs.androidx.compose.ui.test.manifest
     )
+
     debugImplementation(
         libs.androidx.compose.ui.tooling
     )
